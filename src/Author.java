@@ -2,13 +2,16 @@ import java.util.Objects;
 
 public class Author {
     private String fullName;
-    private String[] authorName = new String[3];
+    private String firstName;
+    private String lastName;
+
 
     public Author(String fullName) {
         String[] words = fullName.split(" ");
         String nameAuthor = words[0];
+        firstName = words[0];
+        lastName = words[1];
         for (int i = 1; i < words.length; i++) {
-            this.authorName[i]=words[i];
             nameAuthor = nameAuthor + " " + words[i].charAt(0) + ".";
         }
         this.fullName = nameAuthor;
@@ -17,8 +20,9 @@ public class Author {
     public String getFullName() {
         return this.fullName;
     }
-    public String toString (){
-        return "Автор книги: "+this.fullName;
+
+    public String toString() {
+        return "Автор книги: " + this.fullName;
     }
 
     @Override

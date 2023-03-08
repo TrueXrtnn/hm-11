@@ -6,15 +6,15 @@ public class Book {
     private Author author;
 
 
-    public Book(String nameBook, int yearOfPublication,Author author) {
+    public Book(String nameBook, int yearOfPublication, Author author) {
         this.author = author;
         this.nameBook = nameBook;
         this.yearOfPublication = yearOfPublication;
 
     }
 
-    public String getNameAuthor() {
-        return author.getFullName();
+    public Author getAuthor() {
+        return author;
     }
 
     public int getYearOfPublication() {
@@ -28,8 +28,9 @@ public class Book {
     public String getNameBook() {
         return this.nameBook;
     }
+
     public String toString() {
-        return "Название книги: "+this.nameBook+". Год публикации книги: "+ this.yearOfPublication+". "+author;
+        return "Название книги: " + this.nameBook + ". Год публикации книги: " + this.yearOfPublication + ". " + author;
     }
 
     @Override
