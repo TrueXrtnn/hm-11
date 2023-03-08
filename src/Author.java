@@ -2,11 +2,13 @@ import java.util.Objects;
 
 public class Author {
     private String fullName;
+    private String[] authorName = new String[3];
 
     public Author(String fullName) {
         String[] words = fullName.split(" ");
         String nameAuthor = words[0];
         for (int i = 1; i < words.length; i++) {
+            this.authorName[i]=words[i];
             nameAuthor = nameAuthor + " " + words[i].charAt(0) + ".";
         }
         this.fullName = nameAuthor;
